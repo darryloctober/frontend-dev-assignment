@@ -1,0 +1,249 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,700);
+ 
+   body {
+	    font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+	    margin: 10px;
+	    background: #065ea7;
+	    color: #333;	  
+	    border-radius: 5px;
+		}
+   
+     h1, h2, h3, h4 {
+	  font-family: 'Roboto', sans-serif;
+	  color: #054376;
+	  font-weight: 500;	 
+    } 
+	   
+     h2 {
+		font-size: 21px;
+		line-height: 21px;
+	 }
+	 
+	#TOC {
+	  margin-bottom: 40px;
+	  background: #054376;
+	  padding: 20px 0 0 25px;
+	  width: auto;
+	  min-height: 328px;
+	}
+	
+	#TOC:before {	
+	  content: "TOC";
+	  font-size: 60px;
+	  float: right;
+	  color: #054376;
+	  margin-top: 122px;
+	  margin-right: -3px;
+	  z-index: 999;
+      position: relative;
+	}
+	
+	#TOC:after {
+	  content: "";
+	  position: relative;
+	  display: inline-block;
+	  margin-top: -324px;
+	  border-top: 174px solid #054376;
+	  border-bottom: 174px solid #054376;
+	  border-right: 174px solid #fff;
+	  float: right;
+     }	
+	
+	/* firefox fix */
+	@-moz-document url-prefix(){ 
+		#TOC {
+		  min-height: 348px;	
+	    }
+		#TOC:after {
+		  margin-top: -343px;
+		  border-top: 184px solid #054376;
+	  border-bottom: 184px solid #054376;
+	  border-right: 184px solid #fff;		 
+		}
+	 } 
+	
+	.TOCEntry a,
+	.TOCEntry a:hover,
+	.TOCEntry a:active,
+	.TOCEntry a:visited {
+		color: #fff;
+		font-size:14px;
+		text-decoration:none;
+	}
+	
+	.TOCEntry span.TOCSectNum {
+		display: inline-block;
+		width: 30px;
+	}
+	
+	.TOCEntry span.TOCSectNum:after {
+		content: ")";
+		color: #fff;
+	}
+	
+	.TOCSectNum {
+		margin-right: 10px;
+	}
+	
+	ul li, ol li {
+  		margin-left: 25px;
+		list-style-type: decimal;
+	}
+	  
+   .container {
+	    padding: 20px;
+	    background: #fff;
+	    border-radius: 8px;
+	    width: 1240px;
+	    margin: 0 auto;
+	    border: 3px solid #054376;
+		box-shadow: 0 0 1px #fff;
+   }
+        
+   figure {
+		background: #ebebeb;
+		border: 8px solid #ebebeb;	
+		border-radius: 4px;
+		margin: 30px auto;		
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+	}
+	
+	figure img {		
+		max-width: 100%;	
+	}
+	
+	figcaption {
+	   padding: 8px 0 0;
+	   text-shadow: 1px 1px #fff;
+	   text-align:center;
+	   text-transform:uppercase;
+	}	
+	
+	.MathJax_Display, 
+	.mathidentity,
+	ol[data-class*="ListEnumerated"] {	
+	   background: #ebebeb;
+	   text-align: left !important;
+	   padding: 20px;	 
+	   width: auto !important;	
+	   border-radius: 4px; 	  
+	}
+	
+	.mathidentity > ol,
+	.mathidentity > ul {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.note {		
+		border: 1px dashed #ccc;
+		margin: 16px 0 40px;
+		padding-bottom: 15px;
+		background: #fbf8e5;
+ 		padding: 15px;	
+		-webkit-box-shadow: 0 10px 1px -6px #ebebeb;
+	   -moz-box-shadow: 0 10px 1px -6px #ebebeb;
+	        box-shadow: 0 10px 1px -6px #ebebeb;	
+	}	
+			
+	.note p {
+		font-size: 15px;
+		font-style: italic;		
+	 }
+	
+	.note.visit p:first-child { 
+	   margin-bottom: 25px;
+	}
+	
+	.note.visit p:nth-child(3n) {
+		margin-bottom: 28px;
+	}
+	
+	.note.visit p > a {
+		background: #4d90fe;
+		border: 1px solid #337bf0;
+    	color: #fff;
+    	border-radius: 4px;
+    	padding: 7px 12px;
+    	text-decoration: none;
+    	font-size: 12px;
+		text-shadow: none;
+	}
+	
+	.note.visit p > a:hover,
+	.note.visit p > a:focus,
+	.note.visit p > a:visited { 
+		background: #3a79e1;
+	}
+	
+	.note + .note {
+  		margin-top: -20px;
+	}
+	
+	.worked_example {
+	   border: 1px solid #ddd;
+	   padding: 15px;
+	   margin-top: 40px;
+	   border-radius: 4px;
+	}
+	
+	.worked_example h2 {
+		margin-top: 30px;
+  		margin-bottom: 0;
+	}
+	
+	.worked_example .MathJax_Display,
+	.worked_example ol[data-class*="ListEnumerated"] {
+		margin-bottom: 0;
+	}
+	
+	@media (min-width: 991px) and (max-width: 1399px){
+	.container {
+		width: 900px;
+	  }
+	 #TOC:before {	
+	 	font-size:76px !important;
+	 }
+	}
+	
+	@media (min-width: 768px) and (max-width: 990px){
+	.container {
+		width: 690px;
+	 } 
+		
+	 h1 {
+  		font-size: 1.7em;
+	 }
+	 h2 {
+  		font-size: 19px;
+	 }
+	
+	.MathJax,
+	.MathJax_Display {
+		font-size: 11px !important;
+	  } 
+	}
+	
+	@media (max-width: 767px){
+	.container {
+		width: auto;
+	}	
+	
+	h1 {
+  		font-size: 1.7em;
+	}
+	h2 {
+  		font-size: 19px;
+	}
+	.MathJax,
+	.MathJax_Display {
+		font-size: 11px !important;
+	  }
+	}
+	
+	@media (max-width: 599px){
+	  #TOC:before, #TOC:after {
+		display:none;
+	 }
+	
